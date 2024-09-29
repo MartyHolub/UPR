@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/martin/UPR/Ukol_02/main'
+relocations:     []
+...
