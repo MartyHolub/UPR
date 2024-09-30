@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main(){
-    printf("Testffd");
+    for(int i = 0;i<10;i+2){
+        printf("%d ",i);
+    }
     
 }
