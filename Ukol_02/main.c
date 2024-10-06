@@ -7,25 +7,50 @@ int main(){
     scanf("%d %d %d", &obrazec, &a, &b);
 
     switch(obrazec){
-        case 1: {
-            for(int i = 1, i < a, i++){
-                for(int j = 1, j < b, j++){
+        case 0: {
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
                     printf("x");
                 }
                 printf("\n");
             }
             break;
         }
-        case 2: {
-            for(int i = 1, i < a, i++){
-                for(int j = 1, j < b, j++){
-                    if((i = 1 || i = a-1) || (j = 1 || j = b-1) )printf("x");
+        case 1: {
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    if(j == 0 || j == (a-1))printf("x");
+                    else if(i == 0 || i == (b-1))printf("x");
+                    else printf(" ");
                 }
                 printf("\n");
             }
+            break;
+        }
+        case 2: {
+            int cislo = 0;
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    if(j == 0 || j == (a-1))printf("x");
+                    else if(i == 0 || i == (b-1))printf("x");
+                    else{
+                        if(cislo == 10)cislo = 0;
+                        printf("%d ", cislo);
+                        cislo++;
+                    }
+                }
+                printf("\n");
+            }
+            break;
         }
         case 3: {
-            
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    printf("x");
+                }
+                printf("\n");
+            }
+            break;
         }
         case 4: {
             
@@ -36,13 +61,7 @@ int main(){
         case 6: {
             
         }
-        case 7: {
-            
-        }
-    }
-
-    for(int i = 0;i<10;i+2){
-        printf("%d ",i);
+        default: printf("Obrazec neexistuje");
     }
     return 0;
 }
