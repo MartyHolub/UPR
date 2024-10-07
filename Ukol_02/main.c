@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(){
     int obrazec = 0;
     int a = 0, b = 0;
@@ -64,9 +65,11 @@ int main(){
             break;
         }
         case 5: {
+            //DODELAT
             for(int i = 0; i < a; i++){
-                for(int j = 0; j < 2 * a; j++){
-                    if(j == (a-i)/2 || j == (a+i)/2)printf("x");
+                for(int j = 0; j < 2*a; j++){
+                    if(j == (a+i) || j == (a-i))printf("x");
+                    else if(i == a-1)printf("x");
                     else printf(" ");
                     //else printf("%d",j);
                 }
@@ -75,9 +78,44 @@ int main(){
             break;
         }
         case 6: {
-            
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    if(i == 0)printf("x");
+                    else if(j == a/2)printf("x");
+                    else printf(" ");
+                }
+                printf("\n");
+            }
+            break;
+        }
+        case 7: {
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    if(j == 0 || j == a-1)printf("x");
+                    else if(i == b/2)printf("x");
+                    else printf(" ");
+                }
+                printf("\n");
+            }
+            break;
+            case 9: {
+            int cislo[10];
+            cislo[0] = 0;
+            for(int i = 0; i < b; i++){
+                for(int j = 0; j < a; j++){
+                    if(j == 0 || j == (a-1))printf("x");
+                    else if(i == 0 || i == (b-1))printf("x");
+                    else{
+                        if(cislo[i] == 10)cislo[i] = 0;
+                        printf("%d", cislo[i]);
+                        cislo[i] = i + 1;
+                }
+                }
+                printf("\n");
+            }
+            break;
         }
         default: printf("Obrazec neexistuje");
     }
     return 0;
-}
+}}
