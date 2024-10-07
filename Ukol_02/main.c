@@ -35,7 +35,7 @@ int main(){
                     else if(i == 0 || i == (b-1))printf("x");
                     else{
                         if(cislo == 10)cislo = 0;
-                        printf("%d ", cislo);
+                        printf("%d", cislo);
                         cislo++;
                     }
                 }
@@ -44,19 +44,35 @@ int main(){
             break;
         }
         case 3: {
-            for(int i = 0; i < b; i++){
+            for(int i = 0; i < a; i++){
                 for(int j = 0; j < a; j++){
-                    printf("x");
+                    if(j == i)printf("x");
+                    else printf(" ");
                 }
                 printf("\n");
             }
             break;
         }
         case 4: {
-            
+            for(int i = 1; i <= a; i++){
+                for(int j = 0; j < a; j++){
+                    if(j == (a-i))printf("x");
+                    else printf(" ");
+                }
+                printf("\n");
+            }
+            break;
         }
         case 5: {
-            
+            for(int i = 0; i < a; i++){
+                for(int j = 0; j < 2 * a; j++){
+                    if(j == (a-i)/2 || j == (a+i)/2)printf("x");
+                    else printf(" ");
+                    //else printf("%d",j);
+                }
+                printf("\n");
+            }
+            break;
         }
         case 6: {
             
