@@ -109,7 +109,6 @@ int main(){
                         cislo = i-j+(b-1) * (j-1);
                         printf("%d",cislo%10); 
                     }
-                    
                 }
                 printf("\n");
             }
